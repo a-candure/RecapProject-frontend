@@ -1,0 +1,22 @@
+<div *ngIf="dataLoaded==false" class="spinner-border text-info" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  
+  <h2 class="text-center">Marka Listesi</h2>
+  
+  <table *ngIf="dataLoaded==true" class="table">
+  <thead>
+    <tr>
+      <th>Marka no</th>
+      <th>Marka</th>
+       
+    </tr>
+  </thead>
+    <tr *ngFor="let brand of brands">
+      <td>{{ brand.brandId }}</td>
+      <td>{{ brand.brandName }}</td>
+      
+    </tr>
+  </table>
+  
+  

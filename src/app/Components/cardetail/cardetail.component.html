@@ -1,0 +1,22 @@
+<div *ngIf="dataLoaded == false" class="spinner-border text-info" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  
+  <h2 class="text-center">Araç Detay Listesi</h2>
+<table *ngIf="dataLoaded == true" class="table">
+  <thead>
+    <tr>
+      <th>Araba No</th>
+      <th>Renk</th>
+      <th>Marka</th>
+      <th>Ücret</th>
+      <th>Model</th>
+    </tr>
+  </thead>
+  <tr *ngFor="let cardetail of cardetails">
+    <td>{{ cardetail.carId }}</td>
+    <td>{{ cardetail.colorName  }}</td>
+    <td>{{ cardetail.brandName }}</td>
+    <td>{{ cardetail.dailyPrice }}</td>
+    <td>{{ cardetail.description}}</td>
+</table>
