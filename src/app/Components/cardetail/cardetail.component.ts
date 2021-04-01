@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Cardetail } from 'src/app/models/cardetail/cardetail';
+import { Cardetail } from 'src/app/models/cardetail';
+import { CarImagesService } from 'src/app/services/car-images.service';
 import { CardetailService } from 'src/app/services/cardetail.service';
 
 @Component({
@@ -10,7 +11,9 @@ import { CardetailService } from 'src/app/services/cardetail.service';
 export class CardetailComponent implements OnInit {
   cardetails: Cardetail[] = [];
   dataLoaded = false;
-  constructor(private cardetailService: CardetailService) {}
+  constructor(
+    private cardetailService: CardetailService,
+    private carImagesService: CarImagesService) {}
 
   ngOnInit(): void {
     this.getCardetails();
@@ -20,5 +23,11 @@ export class CardetailComponent implements OnInit {
       this.cardetails = response.data;
       this.dataLoaded = true;
     });
+
+    getByCarId(){
+      this.carImagesService.getByCarId().subscribe((response ) =>{
+        
+      })
+    }
   }
 }
