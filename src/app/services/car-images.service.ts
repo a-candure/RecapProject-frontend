@@ -7,6 +7,7 @@ import { ListResponseModel } from '../models/ListResponseModel';
 @Injectable({
   providedIn: 'root',
 })
+
 export class CarImagesService {
   apiUrl = 'https://localhost:44389/api/';
   constructor(private httpClient: HttpClient) {}
