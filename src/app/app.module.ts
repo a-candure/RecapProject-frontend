@@ -26,7 +26,7 @@ import { DetailofdetailComponent } from './Components/detailofdetail/detailofdet
     NavigateComponent,
     CardetailComponent,
     RentaldetailComponent,
-    DetailofdetailComponent
+    DetailofdetailComponent,
 
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],

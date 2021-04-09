@@ -9,8 +9,8 @@ export interface Cardetail {
   colorName: string;
   brandName: string;
   fuel:string;
-  dailyPrice: number;
-  description: string;
+  dailyPrice: number,
+  description: string,
   modelYear: number
   images: string[];
 }

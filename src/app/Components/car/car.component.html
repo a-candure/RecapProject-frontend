@@ -1,8 +1,8 @@
 <div *ngIf="dataLoaded == false" class="spinner-border text-info" role="status">
-  <span class="visually-hidden">Loading...</span>
+  <span class="visually-hidden">Yükleniyor...</span>
 </div>
 
-<h2 class="text-center">Araç Listesi</h2>
+<h3 class="text-center">Araç Listesi</h3>
 
 <table *ngIf="dataLoaded == true" class="table">
   <thead>
@@ -24,66 +24,3 @@
     <td>{{ car.dailyPrice }}</td>
   </tr>
 </table>
-
-<!--
-<div class="container">
-  <div class="row">
-    <div
-      class="col-lg-4 col-md-6 shadow-lg p-3 mb-5 bg-body rounded"
-      *ngFor="let car of cars"
-    >
-      <div class="card border-0 mb-3" style="width: 18rem">
-          <!-- <img src="..." class="card-img-top" alt="...">  --
-        <div class="card-body text-center">
-          <h4>
-            <a
-              
-              class="card-title text-decoration-none h5"
-              style="color: green"
-              >{{ car.description }}
-            </a>
-          </h4>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">
-            <span class="float-start">Marka</span>
-            <span class="float-end">{{ car.brandId }}</span>
-          </li>
-          <li class="list-group-item">
-            <span class="float-start">Renk </span>
-            <span class="float-end">{{ car.colorId }}</span>
-          </li>
-          <!-- <li class="list-group-item">
-            <span class="float-start">Model Yılı </span>
-            <span class="float-end">{{ cardetail.modelYear }}</span>
-          </li> --
-          <li class="list-group-item">
-            <span class="float-start">Özellikler </span>
-            <span class="float-end">{{ car.description }}</span>
-          </li>
-          <p class="card-text text-center h3 mt-3">
-            {{ car.dailyPrice }}₺ /Gün
-          </p>
-        </ul>
-        <div class="card-body">
-          <div style="margin-top: 50px">
-            <a
-               class="btn btn-default"
-              style="background-color: black; font-weight: bold; color: white"
-              >Şimdi Kirala</a
-            >
-            <a
-              class="btn btn-default"
-              style="
-                background-color: rgb(162, 192, 53);
-                font-weight: bold;
-                color: white;
-                margin-left: 10px;"
-              >Detaylı incele</a
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->

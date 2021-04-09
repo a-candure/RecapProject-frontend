@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Cardetail } from '../models/cardetail';
-import { ListResponseModel } from '../models/ListResponseModel';
+import { ListResponseModel } from '../models/listResponseModel';
 
 
 @Injectable({
@@ -24,5 +24,3 @@ export class CardetailService {
   
   
 }
-
-// burasını fotolu yer ile refactor et
