@@ -12,6 +12,8 @@ import { RentalComponent } from './Components/rental/rental.component';
 import { NavigateComponent } from './Components/navigate/navigate.component';
 import { CardetailComponent } from './Components/cardetail/cardetail.component';
 import { RentaldetailComponent } from './Components/rentaldetail/rentaldetail.component';
+import { DetailofdetailComponent } from './Components/detailofdetail/detailofdetail.component';
+
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { RentaldetailComponent } from './Components/rentaldetail/rentaldetail.co
     NavigateComponent,
     CardetailComponent,
     RentaldetailComponent,
+    DetailofdetailComponent
+
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
