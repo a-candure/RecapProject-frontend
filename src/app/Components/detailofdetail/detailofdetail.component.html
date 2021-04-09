@@ -1,0 +1,63 @@
+<div class="row">
+  <div class="col-md-7" style="margin-top: 70px">
+    <div
+      id="carouselExampleControls"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div *ngFor="let image of carImages" [class]="imgClassGenerator(image)">
+          <img [src]="imgUrl + image" class="d-block w-100" alt="..." />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <div class="col-md-5" style="margin-top: 70px">
+    <p style="margin-top: 15px" class="carName">{{ cardetails.description }}</p>
+    <div class="row" style="margin-top: 40px">
+      <div class="col-sm-6">
+        <p><b>Marka:</b> {{ cardetails.brandName }}</p>
+
+        <p style="margin-top: 6px"><b>Renk:</b> {{ cardetails.colorName }}</p>
+        <p><b>Yakıt:</b> {{ cardetails.fuel }}</p>
+        <p><b>Kiralama Tarihi:</b></p>
+        <input
+          formControlName="rentDate"
+          style="margin-top: -8px"
+          class="form-control"
+          type="date"
+        />
+      </div>
+      <div class="col-sm-6">
+        <p><b>Model Yılı:</b> {{ cardetails.modelYear }}</p>
+        <p><b>Günlük Fiyatı:</b> {{ cardetails.dailyPrice }}TL</p>
+        <p><b>Space </b></p>
+        <p><b>Dönüş Tarihi:</b></p>
+        <input
+          formControlName="returnDate"
+          style="margin-top: -8px"
+          class="form-control"
+          type="date"
+        />
+      </div>
+    </div>
+  </div>
+</div>
